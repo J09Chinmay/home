@@ -104,6 +104,9 @@
             <a href="https://github.com/ChinmayKuJena?tab=repositories" target="_self">
                 <i class="fab fa-github"></i>
             </a>
+            <a href="https://github.com/KalpanikSystems" target="_self">
+                <i class="fab fa-github"></i>
+            </a>
             <a href="https://mail.google.com/mail/u/0/#inbox" target="_self">
                 <i class="fas fa-envelope"></i>
             </a>
@@ -125,13 +128,6 @@
                 const indiaMinutes = String(indiaTime.getMinutes()).padStart(2, '0');
                 const indiaSeconds = String(indiaTime.getSeconds()).padStart(2, '0');
                 document.getElementById('clock-india').textContent = `${indiaHours}:${indiaMinutes}:${indiaSeconds}`;
-
-                // Calgary time
-                const calgaryTime = new Date(now.toLocaleString("en-US", { timeZone: "America/Edmonton" }));
-                const calgaryHours = String(calgaryTime.getHours()).padStart(2, '0');
-                const calgaryMinutes = String(calgaryTime.getMinutes()).padStart(2, '0');
-                const calgarySeconds = String(calgaryTime.getSeconds()).padStart(2, '0');
-                document.getElementById('clock-calgary').textContent = `${calgaryHours}:${calgaryMinutes}:${calgarySeconds}`;
             }
 
             setInterval(updateClocks, 1000); // Update the clocks every second
